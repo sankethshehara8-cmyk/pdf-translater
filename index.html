@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Translator - English to Sinhala | Iskole Potha</title>
+<link href="https://fonts.googleapis.com/css2?family=Iskoola+Potha:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>📄➡️🇱🇰 PDF පරිවර්තකය</h1>
+  <p>English PDF to Sinhala - ඉස්කෝලේ පොත Font එකෙන්</p>
+</header>
+<div class="container">
+  <div class="card">
+    <div class="upload-area" id="uploadArea">
+      <div style="font-size:48px;">📂</div>
+      <h3>PDF එක මෙතනට දාන්න</h3>
+      <p>Click කරන්න හෝ Drag & Drop කරන්න</p>
+      <input type="file" id="fileInput" accept=".pdf">
+    </div>
+    <div id="fileName"></div>
+    <button class="btn" id="translateBtn" disabled>🌐 සිංහලට පරිවර්තනය කරන්න</button>
+    <div class="progress" id="progress">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="status" id="status"></div>
+    </div>
+    <div class="preview" id="preview">
+      <div class="preview-box"><h3>Original (English)</h3><div id="originalText"></div></div>
+      <div class="preview-box sinhala-text"><h3>පරිවර්තනය (සිංහල)</h3><div id="translatedText"></div></div>
+    </div>
+    <button class="btn green" id="downloadBtn">📥 සිංහල PDF එක Download කරන්න</button>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
